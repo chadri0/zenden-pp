@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { saveSettings, resetSettings } = require("../controllers/adminController")
+const {getSettings, saveSettings, resetSettings} = require("../controllers/adminController")
+
+// get timer settings route
+router.get("/settings", getSettings);
 
 // save timer settings route
 router.post("/settings/save", saveSettings);

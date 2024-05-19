@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const timerSettingsSchema = new mongoose.Schema({
     minutes: {
@@ -11,8 +11,8 @@ const timerSettingsSchema = new mongoose.Schema({
     },
     alertSound: {
         type: String,
-        default: 'soft-alarm'
+        default: "soft-alarm"
     }
 });
 
-module.exports = mongoose.model('TimerSettings', timerSettingsSchema);
+module.exports = mongoose.model("TimerSettings", timerSettingsSchema);
