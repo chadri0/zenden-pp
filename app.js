@@ -12,18 +12,31 @@ const helmet = require("helmet");
 const session = require("express-session"); 
 const passport = require("passport");
 
+app.use(morgan("dev"));
+
 // routing variables
 const adminRoutes = require("./routes/adminRouter");
 const authRoutes = require("./routes/authRouter");
 const timerRoutes = require("./routes/timerRouter");
 
 // middleware
-app.use(morgan("dev"));
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname + "/public")));
+
+app.use(
+    session({
+      secret: process.env.SECRET_KEY,
+      resave: false,
+      saveUninitialized: false,
+    })
+  );
+
+app.use(passport.initialize()); 
+app.use(passport.session());
+
 
 // index to initialize server
 app.get("/", (request, response, next) => {
