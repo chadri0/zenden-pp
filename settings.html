@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Cozy Timer</title>
+    <link rel="stylesheet" type="text/css" href="./public/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f96873ad31.js" crossorigin="anonymous"></script>
+    <script defer src="./public/script/timerSettings.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="back-to-home">
+            <h4><a href="index.html"><i class="fa-solid fa-arrow-left-long"></i> Back to Home</a></h4>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Settings</h1>
+            <form class="timersettings-form">
+                
+                <div class="timer-settings">
+                    <p class="settings-title">Timer Settings</p>
+                    <label class="pomodoro-title">Pomodoro:</label>
+                    <input class="minutes-settings" type="number" name="minutes" id="minutes" placeholder="25 minutes" min="5" max="60" step="5"> 
+                    <label class="break-title">Break:</label>
+                    <input class="minutes-settings" type="number" name="break" id="break" placeholder="5 minutes" min="5" max="60" step="5">
+                </div>
+
+                <div class="alertsound-settings">
+                    <p class="settings-title">Alert Sounds</p>
+                    <label for="alertSelect">Select Alert Sound:</label>
+                    <select name="alert-sound" id="alert-sound">
+                        <option selected disabled>Select</option>
+                        <option value="twinkle">Twinkle</option>
+                        <!-- whimsical chimes sound -->
+                        <option value="bells">Bells</option>
+                        <!-- soft bells sound  -->
+                        <option value="soft-alarm">Soft Alarm</option>
+                        <!-- non-obnoxious alarm sound -->
+                    </select>
+                </div>
+            </form>
+
+        <div class="save-reset-settings">
+            <button class="resetsettings-button">Reset</button>
+            <button class="savesettings-button">Save</button>
+        </div>
+
+    </main>
+</body>
+</html>

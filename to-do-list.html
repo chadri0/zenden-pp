@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List | Cozy Timer</title>
+    <link rel="stylesheet" type="text/css" href="./public/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f96873ad31.js" crossorigin="anonymous"></script>
+    <script defer src="./public/script/toDoList.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="back-to-home">
+            <h4><a href="index.html"><i class="fa-solid fa-arrow-left-long"></i> Back to Home</a></h4>
+        </div>
+        
+    </nav>
+    
+    <main class="todolist">
+        <h1 class="todo-title">My To Do List</h1>
+        <div id="toDoDiv" class="todolist-container">
+            <input type="text" id="toDoInput" placeholder="add your tasks here">
+            <span class="todolist-add">Add</span>
+        </div>
+
+        <ul id="toDoUL" class="todolist-list">
+            <li>re-watch lecture video</li>
+            <li>complete slideshow for presentation tomorrow at 9am</li>
+            <li class="checked">pay utility bill</li>
+        </ul>
+    </main>    
+</body>
+</html>
