@@ -1,0 +1,411 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-grey: #423C36;
+    --light-grey: #8E8C88;
+    --dark-brown: #493223;
+    --light-brown: #745143;
+    --rust: #97504D;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: var(--light-brown);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.2rem;
+}
+/* UNIV STYLING */
+.login-form,
+.signup-form,
+.signup-paragraph {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40%;
+}
+
+main {
+    /* background-color: var(--black); */
+    color: var(--white);
+    margin: 5%;
+    padding: 5%;
+}
+
+input {
+    font-family: "Nunito Sans", sans-serif;
+    border: none;
+}
+
+/* NAV STYLING */
+.back-to-home {
+    margin-left: 2.5%;
+    font-size: 1.5rem;
+}
+
+/* LINK STYLING */
+a {
+    color: var(--white);
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 0.4vw;
+}
+
+main h1 {
+    text-align: center;
+}
+
+/* TO-DO LIST STYLING */
+.todolist {
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+/* style the list items */
+.todolist-list li {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    padding: 1%;
+    list-style-type: none;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    user-select: none;
+    word-break: break-word;
+}
+
+.todolist-container {
+    padding: 2% 3%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.todolist-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.todolist-container input {
+    border-radius: 0.5vw;
+    width: 75%;
+    padding: 1%;
+    background-color: var(--black);
+    outline: var(--white) solid 1px;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.todolist-add {
+    padding: 1%;
+    width: 10%;
+    background: var(--light-grey);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 0.4vw;
+}
+
+/* darker background when hovering "add" button */
+.todolist-add:hover {
+    background-color: var(--dark-grey);
+}
+
+/* strikes out text when clicked to show task is done */
+.todolist-list li.checked {
+    text-decoration: line-through;
+    color: var(--rust); 
+}
+
+/* style the delete button */
+.delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.5rem;
+    color: var(--white);
+}
+
+.delete:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* SETTINGS STYLING */
+.settings-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.timersettings-form>div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem 0.5rem;
+    padding: 3rem 5rem;
+    border: 1px solid var(--white);
+    border-radius: 1vw;
+}
+
+.timersettings-form label {
+    text-align: left;
+    margin: 0.5rem 0 0.1rem 0;
+    flex-grow: 0.5;
+    flex-shrink: 0;
+    flex-basis: 30px; 
+}
+
+.timersettings-form input[type="number"],
+.timersettings-form select {
+    background-color: var(--black);
+    outline: var(--white) solid 1px;
+    color: var(--white);
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 5px;
+    padding: 1%;
+    border-radius: 0.5vw;
+}
+
+.timersettings-form select {
+    cursor: pointer;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.save-reset-settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.savesettings-button,
+.resetsettings-button {
+    color: var(--white);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 0.4vw;
+    padding: 1.5% 20%;
+    outline: none;
+    cursor: pointer; 
+}
+
+.savesettings-button {
+    background-color: var(--light-grey);
+}
+
+.resetsettings-button {
+    background-color: var(--rust);
+}
+
+
+/* LOGIN STYLING */
+.login-form>div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.login-field label {
+    text-align: left;
+    margin-bottom: 0.1rem;
+    flex-grow: 0.5;
+    flex-shrink: 0;
+    flex-basis: 150px;
+}
+
+.login-field input[type=email],
+.login-field input[type=password] {
+    background-color: var(--black);
+    outline: var(--white) solid 1px;
+    color: var(--white);
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 190px;
+    padding: 2%;
+    border-radius: 0.5vw;
+}
+
+.login-button {
+    padding: 1.5% 44.5%;
+    background-color: var(--light-grey);
+}
+
+.cancel-button {
+    padding: 1.5%;
+    background-color: var(--rust);
+}
+
+.login-button,
+.signup-button,
+.cancel-button {
+    color: var(--white);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 0.4vw;
+    outline: none;
+    cursor: pointer; 
+}
+
+.cancel-forgot-links,
+.cancel-signup-btns {
+    justify-content: space-between;
+}
+
+.dnt-have-accnt-container,
+.alrdy-have-accnt-container,
+.terms-conditions {
+    margin: 0 auto;
+}
+
+/* SIGN-UP STYLING */
+.signup-form>div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.signup-field label {
+    text-align: left;
+    margin-bottom: 0.1rem;
+    flex-grow: 0.5;
+    flex-shrink: 0;
+    flex-basis: 150px;
+}
+
+.signup-field input[type=email],
+.signup-field input[type=password],
+.signup-field input[type="text"] {
+    background-color: var(--black);
+    outline: var(--white) solid 1px;
+    color: var(--white);
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 190px;
+    padding: 2%;
+    border-radius: 0.5vw;
+}
+
+.signup-button {
+    background-color: var(--light-grey);
+}
+
+.signup-paragraph {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    /*tablet and mobile size  */
+    .navbar-list {
+        display: none;
+    }
+
+    .fa-bars {
+        display: block;
+        margin: 5% 0 0 5%;
+        font-size: 2.5rem;
+        color: var(--white);
+    }
+
+    .login-form,
+    .signup-form,
+    .signup-paragraph,
+    .timersettings-form {
+        width: 100%;
+    }
+
+    .resetsettings-button,
+    .savesettings-button {
+        width: 100%;
+    }
+
+    html, 
+    body {
+        /* max-width: 100vw; */
+        overflow-x: hidden;
+    }
+
+    html {
+        font-size: 11px;
+    }
+
+    .delete {
+        position: static;
+        transform: none;
+        margin-left: auto;
+    }
+
+    .todolist-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .todolist-container input {
+        width: 100%;
+    }
+
+    .todolist-add {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /*tablet size  */
+    .signup-field input[type=email],
+    .signup-field input[type=password],
+    .signup-field input[type="text"],
+    .login-field input[type=email],
+    .login-field input[type=password] {
+        padding: 0.5%;
+    }
+
+    .signup-field label,
+    .login-field label {
+        flex-grow: 0.5;
+        flex-shrink: 0;
+        flex-basis: 5px;
+        text-align: right;
+        margin-right: 1.95%;
+    }
+
+    .login-button {
+        margin: 0 auto;
+        padding: 1% 5%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   /* desktop styling */ 
+   .fa-bars {
+    display: none !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .fa-bars {
+    display: none !important;
+    }
+
+    .signup-field label,
+    .login-field label {
+        text-align: right;
+        margin-right: 1.95%;
+    }
+}
