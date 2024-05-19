@@ -14,7 +14,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    background: var(--light-brown) url("../images/library-image.png") no-repeat fixed center center;
+    background: var(--light-brown) url("/public/images/library-image.png") no-repeat fixed center center;
     background-size: cover;
     font-family: "Nunito Sans", sans-serif;
     font-size: 1.2rem;
