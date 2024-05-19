@@ -1,23 +1,8 @@
-// TIMER SETTINGS HANDLERS
+const { request } = require("express");
 const TimerSettings = require("../models/timerSettingsModel");
+const ToDo = require("../models/toDoModel");
 
-// function to get settings page
-const getSettings = async (request, response, next) => {
-    try {
-        const settings = await TimerSettings.findOne({});
-        if (settings) {
-            response.status(200).json(settings);
-        } else {
-            response.status(404).json({
-                error: "No settings found"
-            });
-        }
-    } catch (error) {
-        response.status(400).json({
-            error: "Something happened while fetching the settings..."
-        });
-    }
-};
+// TIMER SETTINGS HANDLERS
 
 // function to handle saving timer settings
 const saveSettings = async (request, response, next) => {
@@ -64,7 +49,40 @@ const resetSettings = async (request, response, next) => {
 };
 
 
-// TO-DO-LIST HANDLERs
+// TO-DO-LIST HANDLERS
+// create new task
+const createToDo = async (request, response, next) => {
+    const {task, completed} = request.body;
+
+    const newToDo = new ToDo({
+        task: task,
+        completed: completed
+    });
+
+    try {
+        await newToDo.save();
+        response.status(201).json({success: "A new to-do item is created", data: newToDo})
+    } catch (error) {
+        response.status(400).json({error: "Something happened while creating a new to-do item", data: newToDo});
+    }
+};
+
+// delete task
+const deleteToDo = async (request, response, next) => {
+    const {_id} = request.params;
+
+    await ToDo.findByIdAndDelete({_id: _id});
+
+    try {
+        if (!deleteToDo) {
+            return response.status(404).json({error: `To-Do item with ID ${id} not found`});
+        }
+        response.status(200).json({success: `To-Do item with ID ${id} deleted successfully`});
+    } catch (error) {
+        response.status(400).json({error: "Something happened while deleting a to-do item"});
+    }
+};
+
 
 // export
-module.exports = {getSettings,saveSettings, resetSettings};
+module.exports = {saveSettings, resetSettings, createToDo, deleteToDo};

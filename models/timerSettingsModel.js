@@ -15,4 +15,6 @@ const timerSettingsSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("TimerSettings", timerSettingsSchema);
+const TimerSettings = mongoose.model("TimerSettings", timerSettingsSchema);
+
+module.exports = TimerSettings;
