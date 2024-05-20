@@ -52,6 +52,6 @@ app.use("/timer", timerRoutes);
 
 // server
 app.listen(PORT, () => {
-    console.log(`Cozy Pomodoro Timer server is listening on port ${PORT}`);
+    console.log(`ZenDen Timer server is listening on port ${PORT}`);
     console.log(`http://localhost:${PORT}/`)
 });
