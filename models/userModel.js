@@ -1,17 +1,29 @@
 const mongoose = require("mongoose");
-const passport = require("passport"); 
-
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
+
+const userSchema = new mongoose.Schema({
+  firstName: {
+      type: String,
+      required: true,
+  },
+  lastName: {
+      type: String,
+  },
   email: {
-    type: String,
+      type: String,
+      required: true,
+      unique: true,
   },
   password: {
-    type: String,
+      type: Buffer,
   },
-  googleId: {
-    type: String,
+  salt: {
+      type: Buffer,
+  },
+  strategy: {
+      type: String,
+      required: true,
   },
 });
 

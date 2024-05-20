@@ -4,7 +4,7 @@ require("./config/authStrategy");
 require("./config/connection"); 
 const express = require("express");
 const morgan = require("morgan");
-const path = require("path");
+const path = require("node:path");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const cors = require("cors"); 
@@ -26,6 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname + "/public")));
 
+// utilize session
 app.use(
     session({
       secret: process.env.SECRET_KEY,
@@ -34,6 +35,7 @@ app.use(
     })
   );
 
+  // initialize passport and session
 app.use(passport.initialize()); 
 app.use(passport.session());
 
@@ -45,8 +47,8 @@ app.get("/", (request, response, next) => {
 
 // use routers
 app.use(adminRoutes); 
-app.use(authRoutes);
-app.use(timerRoutes);
+app.use("/", authRoutes);
+app.use("/timer", timerRoutes);
 
 // server
 app.listen(PORT, () => {

@@ -1,3 +1,5 @@
-const email = "";
+const email = null;
+const date = new Date();
+const year = date.getFullYear();
 
-module.exports = email;
+module.exports = { email, year, signedIn: true };
