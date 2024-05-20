@@ -1,0 +1,167 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-grey: #423C36;
+    --light-grey: #8E8C88;
+    --dark-brown: #493223;
+    --light-brown: #745143;
+    --rust: #97504D;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: var(--light-brown) url("/public/images/library-image.png") no-repeat fixed center center;
+    background-size: cover;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.2rem;
+}
+
+/* LINK STYLING */
+a {
+    color: var(--white);
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 0.4vw;
+}
+
+main h1 {
+    text-align: center;
+}
+
+/* NAV STYLING */
+nav h4 {
+    margin: 5% 0 0 5%;
+}
+
+.navbar-list {
+    list-style: none;
+    margin: 5% 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.8rem;
+}
+
+/* INDEX(HOMEPAGE) STYLING */
+.pomodoro-container {
+    color: var(--white);
+    text-align: center;
+    margin-top: 20%;
+}
+
+.timer {
+    font-size: 8rem;
+    margin-bottom: 0;
+}
+
+.controls {
+    /* position: relative; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls button {
+    margin: 1% 0.5%;
+    background: none;
+    color: var(--white);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.2rem;
+    border: 2px solid var(--white);
+    border-radius: 1vw;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.controls a {
+    margin: 1% 0.5%;
+    font-size: 2.3rem;
+}
+
+.controls button:hover {
+    font-weight: bold;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* mobile size */
+    .fa-bars {
+        font-size: 3rem!important;
+        margin: 10% 0 0 5%;
+    }
+
+    html {
+        font-size: 9px;
+    }
+
+    section {
+        margin-top: 45%;
+    } 
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /*tablet size  */
+    .fa-bars {
+        font-size: 3rem !important;
+        margin: 8% 0 0 5%;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    section {
+        margin-top: 30%;
+    } 
+}
+/* this media query is for the hamburger menu */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    /* mobile and tablet size */
+    .navbar-list {
+        display: none;
+        /* font-size: 1.6rem;
+        position: absolute;
+        top: 40px;
+        flex-direction: column;
+        row-gap: 10px;
+        backdrop-filter: blur(10px);
+        width: 100%; */
+        
+    }
+    
+    .fa-bars {
+        font-size: 3rem !important;
+        display: block;
+        color: var(--white);
+        opacity: 0.8;
+        cursor: pointer;
+        
+    }
+
+    html, 
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 769px) {
+   /* desktop styling */ 
+   .fa-bars {
+    display: none !important;
+    }
+}

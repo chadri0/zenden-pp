@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Cozy Timer</title>
+    <link rel="stylesheet" type="text/css" href="./public/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f96873ad31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="back-to-home">
+                <h4><a href="index.html"><i class="fa-solid fa-arrow-left-long"></i> Back to Home</a></h4>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sign Up!</h1>
+        <p class="signup-paragraph">Please fill in this form to create a free account.</p>
+        <form action="#" class="signup-form">
+            <div class="signup-field">
+                <label for="first-name">First name:</label>
+                <input type="text" name="first-name" id="first-name" required>
+            </div>
+            <div class="signup-field">
+                <label for="last-name">Last name:</label>
+                <input type="text" name="last-name" id="last-name">
+            </div>
+            <div class="signup-field">
+                <label for="email">Email address:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="signup-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="signup-field">
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" name="confirm-password" id="confirm-password" required>
+            </div>
+            <div class="cancel-signup-btns">
+                <button type="button" class="cancel-button">Cancel</button>
+                <button type="button" class="signup-button">Sign Up</button>
+            </div>
+            <div class="alrdy-have-accnt-container">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>

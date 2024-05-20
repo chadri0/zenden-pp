@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Cozy Timer</title>
+    <!-- THE CSS FILE FOR INDEX IS DIFFERENT THAN THE REST OF THE HTML PAGES -->
+    <link rel="stylesheet" type="text/css" href="./public/styles/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f96873ad31.js" crossorigin="anonymous"></script>
+    <script defer src="./public/script/timerLogic.js"></script> 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar-list">
+                <li><a href="login.html">login</a></li>
+                <li><a href="sign-up.html">sign up</a></li>
+                <li><a href="to-do-list.html">to do list</a></li>
+            </ul>
+            <i class="fa-solid fa-bars fa-lg"></i>
+        </nav>
+    </header>
+    <section>
+        <div class="pomodoro-container">
+
+            <div class="timer-container">
+                <h1 class="timer">00:00</h1>
+            </div>
+
+            <div class="controls">
+                <button id="start-pause-button">
+                    <i class="fa-solid fa-play"></i> <i class="fa-solid fa-pause"></i> start/pause
+                </button>
+                <!-- this button will become a pause button when clicked on -->
+                <button id="reset-button">
+                    <i class="fa-solid fa-rotate-left"></i> reset
+                </button>
+                <!--use font awesome for start/pause and restart buttons  -->
+                <a href="settings.html"><i class="fa-solid fa-gear"></i></a>
+                <!-- add font awesome settings icon for timer settings -->
+            </div>
+
+        </div>
+
+
+    </section>
+</body>
+</html>
